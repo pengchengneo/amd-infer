@@ -1,0 +1,37 @@
+/target/
+/results/
+**/__pycache__/
+*.pyc
+.env
+.env.*
+*.pem
+*.key
+*.gguf
+*.safetensors
+*.pt
+*.pth
+*.onnx
+*.bin
+*.so
+*.dll
+*.exe
+*.a
+*.lib
+*.zip
+*.log
+# Keep machine-specific experiment/implementation scripts local. New public
+# tools must be reviewed and explicitly added to this portable allowlist.
+/tools/*
+!/tools/run_engine.py
+!/tools/benchmark.py
+!/tools/benchmark_native.ps1
+!/tools/native-llama-quality.cs
+!/tools/phase13-native.cs
+!/tools/phase9-adl.cs
+!/tools/phase14-residual-prototype.cpp
+!/tools/phase14-prototype.py
+!/tools/reference_quant.c
+!/tools/reference-model.cpp
+!/tools/build-reference.sh
+!/tools/build-model-reference.sh
+!/tools/compare-f32.py

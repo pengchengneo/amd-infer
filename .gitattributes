@@ -1,0 +1,2 @@
+# Benchmark prompt whitespace is part of the model input.
+fixtures/benchmark/*.txt -text whitespace=-blank-at-eof

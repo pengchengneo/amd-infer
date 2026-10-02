@@ -1,0 +1,73 @@
+[package]
+name = "amd-infer"
+version = "0.1.0"
+edition = "2021"
+default-run = "amd-infer"
+license = "MIT"
+description = "Rust runtime and gfx1201 HIP kernel development for Qwen3.8"
+
+[features]
+default = []
+hip = []
+tokenizer = ["dep:tokenizers"]
+
+[dependencies]
+tokenizers = { version = "=0.23.2", optional = true, default-features = false, features = ["fancy-regex"] }
+
+[[bin]]
+name = "tokenize"
+path = "src/bin/tokenize.rs"
+required-features = ["tokenizer"]
+
+[[bin]]
+name = "generate"
+path = "src/bin/generate.rs"
+required-features = ["hip", "tokenizer"]
+
+[profile.release]
+debug = 1
+
+[[bin]]
+name = "check-ops"
+path = "src/bin/check_ops.rs"
+required-features = ["hip"]
+
+[[bin]]
+name = "check-ffn"
+path = "src/bin/check_ffn.rs"
+required-features = ["hip"]
+
+[[bin]]
+name = "evaluate"
+path = "src/bin/evaluate.rs"
+required-features = ["hip", "tokenizer"]
+
+[[bin]]
+name = "check-gdn"
+path = "src/bin/check_gdn.rs"
+required-features = ["hip"]
+
+[[bin]]
+name = "check-gdn-projected"
+path = "src/bin/check_gdn_projected.rs"
+required-features = ["hip"]
+
+[[bin]]
+name = "check-device"
+path = "src/bin/check_device.rs"
+required-features = ["hip"]
+
+[[bin]]
+name = "check-gemv"
+path = "src/bin/check_gemv.rs"
+required-features = ["hip"]
+
+[[bin]]
+name = "check-tuning"
+path = "src/bin/check_tuning.rs"
+required-features = ["hip"]
+
+[[bin]]
+name = "check-regroup"
+path = "src/bin/check_regroup.rs"
+required-features = ["hip"]

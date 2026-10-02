@@ -1,0 +1,695 @@
+{
+  "status": "Historical local phase13 report,not SOTA or an independently reproduced public result",
+  "hardware": "RX9070XT/gfx1201/16GB",
+  "environment": "WSL AMD-Infer,ROCm7.2.3,Rust1.98.1",
+  "model_filename": "Qwen3.8-27B-UD-IQ4_XS.gguf",
+  "model_sha256": "40fac4050e940397dbf13087afd50f4734a11805bf9d65ef8ddd7483470e6199",
+  "reference": "llama.cpp b11284 /25747b08e7a0f9a59a2089ce6b98d2229b76042a,Windows Vulkan",
+  "protocol": {
+    "warm_tokens": 256,
+    "outputs": 64,
+    "decode_intervals": 63,
+    "context": 512,
+    "batch": 1,
+    "gpu_kv": "FP32",
+    "HIP_activation_state": "FP32",
+    "native_fp32": "MMVQ disabled in inherited startup environment",
+    "native_default": "MMVQ quantized activation remains enabled",
+    "selection_wall": "separately recorded;compute rates include forward+LM head+all-vocabulary read"
+  },
+  "HIP_two_interleaved_ABBAAB_cycles": [
+    {
+      "cases": {
+        "chinese": {
+          "control": {
+            "rates": [
+              22.637446896996224,
+              22.639000080816913,
+              22.630263937328667
+            ],
+            "median": 22.637446896996224,
+            "spread_fraction": 0.0003860380732827462
+          },
+          "candidate": {
+            "rates": [
+              23.329657365628364,
+              23.40800388606156,
+              23.308996065223177
+            ],
+            "median": 23.329657365628364,
+            "spread_fraction": 0.004247622701610165
+          },
+          "gain_fraction": 0.030578115623276947,
+          "saved_ms_per_token": 1.310697158730143,
+          "stable": true,
+          "quality": [
+            {
+              "trial": 0,
+              "candidate": false,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            },
+            {
+              "trial": 1,
+              "candidate": true,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            },
+            {
+              "trial": 2,
+              "candidate": true,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            },
+            {
+              "trial": 3,
+              "candidate": false,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            },
+            {
+              "trial": 4,
+              "candidate": false,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            },
+            {
+              "trial": 5,
+              "candidate": true,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            }
+          ]
+        },
+        "english": {
+          "control": {
+            "rates": [
+              22.65308855305254,
+              22.655171988590123,
+              22.639447775600015
+            ],
+            "median": 22.65308855305254,
+            "spread_fraction": 0.0006945493170136263
+          },
+          "candidate": {
+            "rates": [
+              23.385058927057894,
+              23.391550015085993,
+              23.41278136378756
+            ],
+            "median": 23.391550015085993,
+            "spread_fraction": 0.0011854764538390405
+          },
+          "gain_fraction": 0.032598709897946554,
+          "saved_ms_per_token": 1.393610507936522,
+          "stable": true,
+          "quality": [
+            {
+              "trial": 0,
+              "candidate": false,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            },
+            {
+              "trial": 1,
+              "candidate": true,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            },
+            {
+              "trial": 2,
+              "candidate": true,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            },
+            {
+              "trial": 3,
+              "candidate": false,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            },
+            {
+              "trial": 4,
+              "candidate": false,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            },
+            {
+              "trial": 5,
+              "candidate": true,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            }
+          ]
+        },
+        "long": {
+          "control": {
+            "rates": [
+              22.402011481589156,
+              22.412175497014776,
+              22.396628059238346
+            ],
+            "median": 22.402011481589156,
+            "spread_fraction": 0.0006941865416216775
+          },
+          "candidate": {
+            "rates": [
+              23.085038093561252,
+              23.134794205324972,
+              23.141722357803125
+            ],
+            "median": 23.134794205324972,
+            "spread_fraction": 0.002455454654748168
+          },
+          "gain_fraction": 0.032710577098759464,
+          "saved_ms_per_token": 1.4139126031745946,
+          "stable": true,
+          "quality": [
+            {
+              "trial": 0,
+              "candidate": false,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            },
+            {
+              "trial": 1,
+              "candidate": true,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            },
+            {
+              "trial": 2,
+              "candidate": true,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            },
+            {
+              "trial": 3,
+              "candidate": false,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            },
+            {
+              "trial": 4,
+              "candidate": false,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            },
+            {
+              "trial": 5,
+              "candidate": true,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            }
+          ]
+        }
+      },
+      "output_tokens": 64,
+      "warm_tokens": 256,
+      "observed": false,
+      "arithmetic": "FP32 activation/state;same key accumulation order;baseline phase11 FP32 regroup",
+      "frozen_boundary_exact": true,
+      "comparison": "prompt+last all248320 logits,all generated IDs;prior frozen phase11 prompt+first8 IDs"
+    },
+    {
+      "cases": {
+        "chinese": {
+          "control": {
+            "rates": [
+              22.49411272031466,
+              22.528569412198063,
+              22.546934149063375
+            ],
+            "median": 22.528569412198063,
+            "spread_fraction": 0.002348233486934248
+          },
+          "candidate": {
+            "rates": [
+              23.267940991322742,
+              23.28083373401589,
+              23.278794919041186
+            ],
+            "median": 23.278794919041186,
+            "spread_fraction": 0.0005540989938883634
+          },
+          "gain_fraction": 0.03330107176876096,
+          "saved_ms_per_token": 1.430532460317437,
+          "stable": true,
+          "quality": [
+            {
+              "trial": 0,
+              "candidate": false,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            },
+            {
+              "trial": 1,
+              "candidate": true,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            },
+            {
+              "trial": 2,
+              "candidate": true,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            },
+            {
+              "trial": 3,
+              "candidate": false,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            },
+            {
+              "trial": 4,
+              "candidate": false,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            },
+            {
+              "trial": 5,
+              "candidate": true,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            }
+          ]
+        },
+        "english": {
+          "control": {
+            "rates": [
+              22.570403108757336,
+              22.565537517746183,
+              22.58316145160704
+            ],
+            "median": 22.570403108757336,
+            "spread_fraction": 0.0007810110371622159
+          },
+          "candidate": {
+            "rates": [
+              23.331615798039707,
+              23.3262069956701,
+              23.327099079707633
+            ],
+            "median": 23.327099079707633,
+            "spread_fraction": 0.00023187663432011618
+          },
+          "gain_fraction": 0.03352602819294348,
+          "saved_ms_per_token": 1.4372137777777922,
+          "stable": true,
+          "quality": [
+            {
+              "trial": 0,
+              "candidate": false,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            },
+            {
+              "trial": 1,
+              "candidate": true,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            },
+            {
+              "trial": 2,
+              "candidate": true,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            },
+            {
+              "trial": 3,
+              "candidate": false,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            },
+            {
+              "trial": 4,
+              "candidate": false,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            },
+            {
+              "trial": 5,
+              "candidate": true,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            }
+          ]
+        },
+        "long": {
+          "control": {
+            "rates": [
+              22.339123161034603,
+              22.353985047043288,
+              22.36046370287738
+            ],
+            "median": 22.353985047043288,
+            "spread_fraction": 0.0009552989922181343
+          },
+          "candidate": {
+            "rates": [
+              23.08826450605387,
+              22.951615838182786,
+              23.08074978914773
+            ],
+            "median": 23.08074978914773,
+            "spread_fraction": 0.005953771134656005
+          },
+          "gain_fraction": 0.032511641238686995,
+          "saved_ms_per_token": 1.408604206349196,
+          "stable": true,
+          "quality": [
+            {
+              "trial": 0,
+              "candidate": false,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            },
+            {
+              "trial": 1,
+              "candidate": true,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            },
+            {
+              "trial": 2,
+              "candidate": true,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            },
+            {
+              "trial": 3,
+              "candidate": false,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            },
+            {
+              "trial": 4,
+              "candidate": false,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            },
+            {
+              "trial": 5,
+              "candidate": true,
+              "full_vocab_boundary_bit_exact": true,
+              "frozen_phase11_prompt_bit_exact": true
+            }
+          ]
+        }
+      },
+      "output_tokens": 64,
+      "warm_tokens": 256,
+      "observed": false,
+      "arithmetic": "FP32 activation/state;same key accumulation order;baseline phase11 FP32 regroup",
+      "frozen_boundary_exact": true,
+      "comparison": "prompt+last all248320 logits,all generated IDs;prior frozen phase11 prompt+first8 IDs"
+    }
+  ],
+  "native_serial_trials": {
+    "fp32": {
+      "chinese": {
+        "compute_tok_s": [
+          24.145400381711955,
+          24.151563250183965,
+          24.40663593961597
+        ],
+        "selection_wall_tok_s": [
+          23.007563279929006,
+          23.01548101624674,
+          23.25350062073928
+        ],
+        "context": 512,
+        "prompt_tokens": 10,
+        "outputs": 64,
+        "intervals": 63
+      },
+      "english": {
+        "compute_tok_s": [
+          24.4373048724844,
+          24.09326065225198,
+          24.103112656839055
+        ],
+        "selection_wall_tok_s": [
+          23.275095595989857,
+          22.95642455218028,
+          22.945529243913125
+        ],
+        "context": 512,
+        "prompt_tokens": 5,
+        "outputs": 64,
+        "intervals": 63
+      },
+      "long": {
+        "compute_tok_s": [
+          24.100932870600527,
+          24.159243004250193,
+          24.44027882090785
+        ],
+        "selection_wall_tok_s": [
+          22.95683779252295,
+          23.009694312923955,
+          23.274642443305464
+        ],
+        "context": 512,
+        "prompt_tokens": 74,
+        "outputs": 64,
+        "intervals": 63
+      }
+    },
+    "default": {
+      "chinese": {
+        "compute_tok_s": [
+          25.200506026161,
+          25.51044373270757,
+          25.226632260209747
+        ],
+        "selection_wall_tok_s": [
+          23.960789195372737,
+          24.239895551444352,
+          23.989253728206098
+        ],
+        "context": 512,
+        "prompt_tokens": 10,
+        "outputs": 64,
+        "intervals": 63
+      },
+      "english": {
+        "compute_tok_s": [
+          25.2036827621252,
+          25.178545864639663,
+          25.482375297142706
+        ],
+        "selection_wall_tok_s": [
+          23.973470272839783,
+          23.933697730846117,
+          24.197205844938775
+        ],
+        "context": 512,
+        "prompt_tokens": 5,
+        "outputs": 64,
+        "intervals": 63
+      },
+      "long": {
+        "compute_tok_s": [
+          25.526662659926057,
+          25.538440521478744,
+          25.506952709461878
+        ],
+        "selection_wall_tok_s": [
+          24.26536697766265,
+          24.26101805470305,
+          24.23652540555305
+        ],
+        "context": 512,
+        "prompt_tokens": 74,
+        "outputs": 64,
+        "intervals": 63
+      }
+    }
+  },
+  "remaining_latency_gaps": {
+    "chinese": [
+      {
+        "control_ms": 44.174592857142855,
+        "candidate_ms": 42.86389569841271,
+        "native_fp32_ms": 41.40518730158732,
+        "native_default_ms": 39.64064603174603,
+        "old_gap_to_native_fp32_ms": 2.7694055555555366,
+        "new_gap_to_native_fp32_ms": 1.4587083968253935,
+        "observed_same_precision_GDN_saving_ms": 1.310697158730143,
+        "native_arithmetic_difference_ms": 1.7645412698412883,
+        "new_actual_default_gap_ms": 3.223249666666682,
+        "limitation": "Different runtimes measured serially;one-session native3trials and HIPtwoABcycles,not physical attribution of native per-module costs."
+      },
+      {
+        "control_ms": 44.38808260317459,
+        "candidate_ms": 42.95755014285715,
+        "native_fp32_ms": 41.40518730158732,
+        "native_default_ms": 39.64064603174603,
+        "old_gap_to_native_fp32_ms": 2.98289530158727,
+        "new_gap_to_native_fp32_ms": 1.552362841269833,
+        "observed_same_precision_GDN_saving_ms": 1.430532460317437,
+        "native_arithmetic_difference_ms": 1.7645412698412883,
+        "new_actual_default_gap_ms": 3.3169041111111213,
+        "limitation": "Different runtimes measured serially;one-session native3trials and HIPtwoABcycles,not physical attribution of native per-module costs."
+      }
+    ],
+    "english": [
+      {
+        "control_ms": 44.1440908888889,
+        "candidate_ms": 42.750480380952375,
+        "native_fp32_ms": 41.48841746031745,
+        "native_default_ms": 39.67674126984127,
+        "old_gap_to_native_fp32_ms": 2.655673428571447,
+        "new_gap_to_native_fp32_ms": 1.262062920634925,
+        "observed_same_precision_GDN_saving_ms": 1.393610507936522,
+        "native_arithmetic_difference_ms": 1.8116761904761773,
+        "new_actual_default_gap_ms": 3.0737391111111023,
+        "limitation": "Different runtimes measured serially;one-session native3trials and HIPtwoABcycles,not physical attribution of native per-module costs."
+      },
+      {
+        "control_ms": 44.30581036507935,
+        "candidate_ms": 42.86859658730156,
+        "native_fp32_ms": 41.48841746031745,
+        "native_default_ms": 39.67674126984127,
+        "old_gap_to_native_fp32_ms": 2.8173929047619026,
+        "new_gap_to_native_fp32_ms": 1.3801791269841104,
+        "observed_same_precision_GDN_saving_ms": 1.4372137777777922,
+        "native_arithmetic_difference_ms": 1.8116761904761773,
+        "new_actual_default_gap_ms": 3.1918553174602877,
+        "limitation": "Different runtimes measured serially;one-session native3trials and HIPtwoABcycles,not physical attribution of native per-module costs."
+      }
+    ],
+    "long": [
+      {
+        "control_ms": 44.638848650793655,
+        "candidate_ms": 43.22493604761906,
+        "native_fp32_ms": 41.39202539682538,
+        "native_default_ms": 39.1747253968254,
+        "old_gap_to_native_fp32_ms": 3.246823253968273,
+        "new_gap_to_native_fp32_ms": 1.8329106507936785,
+        "observed_same_precision_GDN_saving_ms": 1.4139126031745946,
+        "native_arithmetic_difference_ms": 2.2172999999999803,
+        "new_actual_default_gap_ms": 4.050210650793659,
+        "limitation": "Different runtimes measured serially;one-session native3trials and HIPtwoABcycles,not physical attribution of native per-module costs."
+      },
+      {
+        "control_ms": 44.73475301587301,
+        "candidate_ms": 43.326148809523815,
+        "native_fp32_ms": 41.39202539682538,
+        "native_default_ms": 39.1747253968254,
+        "old_gap_to_native_fp32_ms": 3.342727619047629,
+        "new_gap_to_native_fp32_ms": 1.9341234126984332,
+        "observed_same_precision_GDN_saving_ms": 1.408604206349196,
+        "native_arithmetic_difference_ms": 2.2172999999999803,
+        "new_actual_default_gap_ms": 4.1514234126984135,
+        "limitation": "Different runtimes measured serially;one-session native3trials and HIPtwoABcycles,not physical attribution of native per-module costs."
+      }
+    ]
+  },
+  "quality": {
+    "original_gate": 0.001,
+    "changed_gate": false,
+    "legacy_independent_steps": 724,
+    "phase11_self_steps": 768,
+    "all_legacy_gates_pass": true,
+    "all_legacy_self_bit_exact": true,
+    "sampling_comparisons": 480,
+    "all_sampling_self_bit_exact": true,
+    "story_free_and_teacher_steps": {
+      "candidate": 469,
+      "teacher": 469
+    },
+    "CLI469_ids_text_identical": true,
+    "independent_long": {
+      "steps": 469,
+      "max_abs": 0.0007534027099609375,
+      "min_top40_overlap": 40,
+      "all_argmax_agree": true,
+      "max_TV": 5.930588129955857e-06,
+      "oracle": "Frozen phase12 independent pinned Vulkan FP32,unobserved with startup MMVQ disable;same model/version/hash/prompt+teacher IDs. This phase freshly replays HIP column runtime;external36cases reference freshly executed inphase13.",
+      "gate_pass": true
+    },
+    "external": {
+      "cases": 36,
+      "accuracy": {
+        "control": {
+          "correct": 24,
+          "total": 36
+        },
+        "candidate": {
+          "correct": 24,
+          "total": 36
+        },
+        "native_fp32": {
+          "correct": 24,
+          "total": 36
+        }
+      },
+      "groups": {
+        "external24": {
+          "control": {
+            "correct": 12,
+            "total": 24
+          },
+          "candidate": {
+            "correct": 12,
+            "total": 24
+          },
+          "native_fp32": {
+            "correct": 12,
+            "total": 24
+          }
+        },
+        "fixed8": {
+          "control": {
+            "correct": 8,
+            "total": 8
+          },
+          "candidate": {
+            "correct": 8,
+            "total": 8
+          },
+          "native_fp32": {
+            "correct": 8,
+            "total": 8
+          }
+        },
+        "long4": {
+          "control": {
+            "correct": 4,
+            "total": 4
+          },
+          "candidate": {
+            "correct": 4,
+            "total": 4
+          },
+          "native_fp32": {
+            "correct": 4,
+            "total": 4
+          }
+        }
+      },
+      "all_prompt_ids_identical": true,
+      "self_288steps_bit_exact": true,
+      "native_id_agreements": 36,
+      "independent_steps": 288,
+      "independent_max_abs": 0.00014495849609375,
+      "independent_min_top40_overlap": 40,
+      "independent_max_tv": 3.187929155031476e-05,
+      "independent_gate_pass": true
+    },
+    "highest_processed_position": 510,
+    "limitations": "Diagnostic sample of24adapted public counting+8fixedtruth+4longlookup and one469token story;not full BIG-bench,SOTA or universal/general-quality guarantee. Fixed-length evaluate ignoresEOS;answer scoring stops before first EOS."
+  },
+  "local_frozen_kernel_library_sha256": "1051f5b5ea7e26b34590b9e88d35c12b6cc94ccbf42459ee6b5829eebd6cd25d",
+  "raw_artifacts_distributed": false,
+  "limitations": [
+    "Raw logs/model/frozen executables are retained locally and not included in this checkout;this is a sanitized summary,not a substitute for reproduction.",
+    "HIP compute timing includes forward+LMhead+full-vocabulary retrieval;selection wall rate is separate.",
+    "Default Vulkan MMVQ uses eligible Q8_1 activation quantization;FP32 activation comparator is a separate arm.",
+    "Historical absolute-rate drift is not causally resolved.",
+    "Quality tests are bounded diagnostic coverage,not universal numerical equivalence or a full benchmark/SOTA qualification.",
+    "Phase14 full512context steady-state attempts were blocked by unchanged VRAM reserve;only a standalone0.15–0.17ms/token micro extrapolation was obtained,not an integrated engine gain."
+  ]
+}
